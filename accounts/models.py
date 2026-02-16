@@ -14,5 +14,7 @@ class Profile(models.Model):
     location = models.CharField(max_length=100)
     user_type = models.CharField(max_length=100, choices=USER_TYPES)
 
+    is_deleted = models.BooleanField(default=False)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
